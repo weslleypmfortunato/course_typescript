@@ -42,3 +42,12 @@ let inf = 'Teste'
 // aqui dá erro pq o TS informa que estas variaveis são do tipo String
 
 console.log('testando')
+
+
+// Desafio 2
+
+const n1:number = 10
+const numberToString = n1.toString()
+
+const printMyNumber:string = `Eu vou imprimir o número ${numberToString}`
+console.log(printMyNumber)

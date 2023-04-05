@@ -122,3 +122,89 @@ function showId(id: ID) {
 showId("A1B2C3")
 showId(21154)
 // showId(false)
+
+
+// 12 - Interface
+interface Point {
+  x:number
+  y:number
+  z:number
+}
+
+function showCoords(obj: Point) {
+  console.log(`X: ${obj.x} Y:${obj.y} Z: ${obj.z}`)
+}
+
+const coordObj:Point = {
+  x: 10,
+  y: 15,
+  z: 20
+}
+
+showCoords(coordObj)
+
+
+// 13 - Interface vs Type Alias
+interface Person {
+  name:string
+}
+
+interface Person {
+  age:number
+}
+
+const somePerson: Person = {name: "Weslley", age: 36}
+console.log(somePerson)
+
+type personType = {
+  name:string
+}
+
+// type personType = {
+//   age:number
+// }
+// ** AQUI DÁ ERRO PORQUE O TYPE SE COMPORTA COMO SE FOSSE UM CONST, OU SEJA, N˜AO PODE SER ALTERADO OU ADICIONAR ALGO NELE. JÁ A INTERFACE VC CONSEGUE ADICIONAR UMA NOVA "PROPRIEDADE" SE QUISER **
+
+
+// 14 - Literal Types
+let test: "testando"
+test = "testando"
+console.log(test)
+
+function showDirection(direction: "left" | "right" | "center") {
+  console.log(`A direção é: ${direction}`)
+}
+
+showDirection("left")
+showDirection("right")
+showDirection("center")
+// showDirection("top")
+
+
+// 15 Non-null Assertion Operator
+const p = document.getElementById("some-p")
+console.log(p!.innerText)
+
+
+// 16 - Bigint
+let n:bigint
+
+// n = 1
+n = 1000n
+console.log(n)
+console.log(typeof n)
+console.log(n + 100n)
+
+
+// 17 - Symbol
+let symbolA:symbol = Symbol("a")
+let symbolB = Symbol("a")
+
+console.log(typeof symbolA)
+console.log(typeof symbolB)
+
+console.log(symbolA == symbolB)
+console.log(symbolA === symbolB)
+
+
+

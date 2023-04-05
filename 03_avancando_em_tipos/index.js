@@ -83,4 +83,46 @@ function showId(id) {
 }
 showId("A1B2C3");
 showId(21154);
-// showId(false)
+function showCoords(obj) {
+    console.log(`X: ${obj.x} Y:${obj.y} Z: ${obj.z}`);
+}
+const coordObj = {
+    x: 10,
+    y: 15,
+    z: 20
+};
+showCoords(coordObj);
+const somePerson = { name: "Weslley", age: 36 };
+console.log(somePerson);
+// type personType = {
+//   age:number
+// }
+// ** AQUI DÁ ERRO PORQUE O TYPE SE COMPORTA COMO SE FOSSE UM CONST, OU SEJA, N˜AO PODE SER ALTERADO OU ADICIONAR ALGO NELE. JÁ A INTERFACE VC CONSEGUE ADICIONAR UMA NOVA "PROPRIEDADE" SE QUISER **
+// 14 - Literal Types
+let test;
+test = "testando";
+console.log(test);
+function showDirection(direction) {
+    console.log(`A direção é: ${direction}`);
+}
+showDirection("left");
+showDirection("right");
+showDirection("center");
+// showDirection("top")
+// 15 Non-null Assertion Operator
+const p = document.getElementById("some-p");
+console.log(p.innerText);
+// 16 - Bigint
+let n;
+// n = 1
+n = 1000n;
+console.log(n);
+console.log(typeof n);
+console.log(n + 100n);
+// 17 - Symbol
+let symbolA = Symbol("a");
+let symbolB = Symbol("a");
+console.log(typeof symbolA);
+console.log(typeof symbolB);
+console.log(symbolA == symbolB);
+console.log(symbolA === symbolB);

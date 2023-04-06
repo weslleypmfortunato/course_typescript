@@ -41,7 +41,7 @@ console.log(myPen)
 
 // 4 - Type parameters
 function getSomeKey<T, K extends keyof T>(obj: T, key: K) {
-  // return `A chave ${key} está presente no objeto e tem o valor de ${obj[key]}`
+  return `A chave ${[key]} está presente no objeto e tem o valor de ${obj[key]}`
 }
 
 const server = {
@@ -139,4 +139,3 @@ showKm(newTruck.km)
 
   type a3 = `${a1} | ${a2}`
 
-  

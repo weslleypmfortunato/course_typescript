@@ -21,7 +21,7 @@ console.log(myCar);
 console.log(myPen);
 // 4 - Type parameters
 function getSomeKey(obj, key) {
-    // return `A chave ${key} está presente no objeto e tem o valor de ${obj[key]}`
+    return `A chave ${[key]} está presente no objeto e tem o valor de ${obj[key]}`;
 }
 const server = {
     hd: '2TB',
